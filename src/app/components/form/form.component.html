@@ -1,0 +1,23 @@
+<form [formGroup]="myForm">
+  <div class="form-wrapper">
+    <div class="form-block">
+      <label>Name *</label>
+      <input type="text">
+    </div>
+    <div class="form-block">
+      <label>Age *</label>
+      <input type="number">
+    </div>
+    <div class="form-block">
+      <label>Email *</label>
+      <input type="email">
+    </div>
+    <div class="form-block">
+      <label>Phone *</label>
+      <input type="number">
+    </div>
+    <div class="form-button">
+      <button (click)="saveFormData()">Save</button>
+    </div>
+  </div>
+</form>
