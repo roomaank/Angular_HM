@@ -8,8 +8,10 @@ import { UserService } from './services/user.service';
 
 
 @NgModule({
-  declarations: [UsersComponent, UserComponent],
-  exports: [UsersComponent, UserComponent],
+  declarations: [
+    UsersComponent,
+    UserComponent
+  ],
   imports: [
     CommonModule,
     UserRoutingModule
