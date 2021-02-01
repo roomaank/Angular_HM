@@ -1,4 +1,6 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { User } from '../../models/User';
 import { UserService } from '../../services/user.service';
 
@@ -12,7 +14,8 @@ export class UsersComponent implements OnInit {
   users: User[] = [];
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -24,6 +27,10 @@ export class UsersComponent implements OnInit {
       .subscribe(value => {
         this.users = value;
       })
+  }
+
+  navigateToMoreInfo(user){
+    this.router.navigate(['users', user.id])
   }
 
 }

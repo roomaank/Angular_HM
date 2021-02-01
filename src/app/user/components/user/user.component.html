@@ -1,2 +1,6 @@
-<p>{{user | json}} - <a [routerLink]="[user.id]">More Info</a></p>
-<hr>
+<div>
+    <p>{{user?.username}}</p>
+    <p>{{user?.address.city}}</p>
+    <p>{{user?.email}}</p>
+    <p>{{user?.address.zipcode}}</p>
+</div>
