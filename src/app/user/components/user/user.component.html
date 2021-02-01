@@ -1,6 +1,17 @@
 <div>
-    <p>{{user?.username}}</p>
-    <p>{{user?.address.city}}</p>
-    <p>{{user?.email}}</p>
-    <p>{{user?.address.zipcode}}</p>
+  <div>
+    <p>Username: {{user?.username}}</p>
+  </div>
+  <div>
+    <p>City: {{user?.address.city}}</p>
+  </div>
+  <div>
+    <p>Email: {{user?.email}}</p>
+  </div>
+  <div>
+    <p>Zipcode: {{user?.address.zipcode}}</p>
+  </div>
+  <div>
+      <button (click)="navigateToAllUsers()">Back to All Users</button>
+  </div>
 </div>
