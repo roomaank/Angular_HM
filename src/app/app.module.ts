@@ -16,6 +16,10 @@ import { RouterModule } from '@angular/router';
       {
         path: '', loadChildren : () => import('./user/user.module')
           .then(m => m.UserModule)
+      },
+      {
+        path: '', loadChildren: () => import('./post/post.module')
+          .then(m => m.PostModule)
       }
     ])
   ],

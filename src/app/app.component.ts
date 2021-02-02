@@ -16,5 +16,9 @@ export class AppComponent {
     this.router.navigate(['users'])
   }
 
+  navigateToPosts(){
+    this.router.navigate(['posts'])
+  }
+
 }
 

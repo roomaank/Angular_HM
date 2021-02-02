@@ -1,0 +1,6 @@
+<div *ngFor="let post of posts">
+    <p>UserId : {{post.userId}}</p>
+    <p>{{post.title}}</p>
+    <button (click)="navigateToMoreInfo(post)">More Info</button>
+    <hr>
+</div>
