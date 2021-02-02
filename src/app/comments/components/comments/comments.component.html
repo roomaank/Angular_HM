@@ -1,0 +1,5 @@
+<div *ngFor="let comment of comments">
+    <p>{{comment.id}} - {{comment.name}}</p>
+    <button (click)="navigateToMoreInfo(comment)">More Info</button>
+    <hr>
+</div>

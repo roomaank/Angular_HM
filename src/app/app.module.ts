@@ -1,9 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserModule } from './user/user.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -20,7 +18,11 @@ import { RouterModule } from '@angular/router';
       {
         path: '', loadChildren: () => import('./post/post.module')
           .then(m => m.PostModule)
-      }
+      },
+      {
+        path: '', loadChildren: () => import('./comments/comments.module')
+          .then(m => m.CommentsModule)
+      } 
     ])
   ],
   providers: [],

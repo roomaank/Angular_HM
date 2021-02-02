@@ -20,5 +20,9 @@ export class AppComponent {
     this.router.navigate(['posts'])
   }
 
+  navigateToComments(){
+    this.router.navigate(['comments'])
+  }
+
 }
 

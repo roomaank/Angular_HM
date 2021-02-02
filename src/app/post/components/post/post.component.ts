@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from '../../models/Post';
 import { PostService } from '../../services/post.service';
 
@@ -14,7 +14,8 @@ export class PostComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private postService: PostService
+    private postService: PostService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -29,6 +30,10 @@ export class PostComponent implements OnInit {
             this.post = value;
           })
       })
+  }
+
+  navigateToAllPosts(){
+    this.router.navigate(['posts'])
   }
 
 }
